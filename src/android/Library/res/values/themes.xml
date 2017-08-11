@@ -3,7 +3,7 @@
     <style name="MyTheme" parent="Theme.AppCompat.Light">
         <item name="actionBarStyle">@style/AppThemeActionBar</item>
     </style>
-    <style name="AppThemeActionBar" parent="@style/Widget.AppCompat.ActionBar">
+    <style name="AppThemeActionBar" parent="@android:style/Widget.AppCompat.ActionBar">
         <item name="contentInsetLeft">0dp</item>
         <item name="contentInsetStart">0dp</item>
         <item name="contentInsetEnd">0dp</item>
