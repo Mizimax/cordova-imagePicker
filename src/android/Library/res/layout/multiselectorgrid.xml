@@ -13,11 +13,13 @@
         android:fadingEdgeLength="10dip"
         android:fastScrollEnabled="true"
         android:gravity="center"
-        android:horizontalSpacing="8dip"
+        android:horizontalSpacing="2dip"
         android:numColumns="3"
         android:requiresFadingEdge="vertical"
         android:scrollingCache="true"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="8dip" />
+        android:verticalSpacing="2dip"
+        android:listSelector="@drawable/grid_selector"
+        android:drawSelectorOnTop="true" />
 
 </LinearLayout>
