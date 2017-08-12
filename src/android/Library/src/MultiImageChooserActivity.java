@@ -64,6 +64,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -211,7 +212,9 @@ public class MultiImageChooserActivity extends AppCompatActivity implements
             // newData.putExtras(res);
             // setResult(RESULT_OK, newData);
             // finish();
-            final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/Messenger/";
+            final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/KTB/";
+            File fileDir = new File(dir);
+            fileDir.mkdir();
 
             Calendar c = Calendar.getInstance(); 
             String date = c.get(Calendar.YEAR) + "" + c.get(Calendar.MONTH) + "" + c.get(Calendar.DATE);
@@ -227,7 +230,6 @@ public class MultiImageChooserActivity extends AppCompatActivity implements
 
             Uri outputFileUri = Uri.fromFile(newfile);
             this.cameraUrl = outputFileUri.toString();
-            dataLog(this.cameraUrl);
 
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
