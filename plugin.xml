@@ -86,6 +86,7 @@
 		
         <source-file src="src/android/Library/res/anim/image_pop_in.xml" target-dir="res/anim"/>
 		<source-file src="src/android/Library/res/drawable/grid_background.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/grid_selector.xml" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable/camera_pic.jpg" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable-hdpi/image_bg.9.png" target-dir="res/drawable-hdpi"/>
 		<source-file src="src/android/Library/res/drawable-hdpi/loading_icon.png" target-dir="res/drawable-hdpi"/>
