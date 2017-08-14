@@ -496,9 +496,9 @@ public class MultiImageChooserActivity extends AppCompatActivity implements
 			if(position == 0){
                 imageView.setImageResource(fakeR.getId("drawable", "camera_pic"));
                 if (android.os.Build.VERSION.SDK_INT >= 16) {
-                  imageView.setImageAlpha(128);
+                  imageView.setImageAlpha(90);
                 } else {
-                  imageView.setAlpha(128);
+                  imageView.setAlpha(90);
                 }
 
                 imageView.setBackgroundColor(0xff000000);
@@ -514,24 +514,6 @@ public class MultiImageChooserActivity extends AppCompatActivity implements
 
             final int id = imagecursor.getInt(image_column_index);
             final int rotate = imagecursor.getInt(image_column_orientation);
-
-            if (isChecked(position)) {
-                if (android.os.Build.VERSION.SDK_INT >= 16) {
-                  imageView.setImageAlpha(128);
-                } else {
-                  imageView.setAlpha(128);
-                }
-
-                imageView.setBackgroundColor(selectedColor);
-
-            } else {
-                if (android.os.Build.VERSION.SDK_INT >= 16) {
-                  imageView.setImageAlpha(255);
-                } else {
-                  imageView.setAlpha(255);
-                }
-                imageView.setBackgroundColor(Color.TRANSPARENT);
-            }
 
             if (shouldRequestThumb) {
                 fetcher.fetch(id, imageView, colWidth, rotate);
